@@ -55,6 +55,5 @@ Example for body params for POST and PUT requests:
 3. Spring (Spring Core, Spring Security, Spring Web)
 4. Tomcat 9.0.50
 5. Hibernate
-6. JSON
-7. Maven 
+6. Maven 
 ```
