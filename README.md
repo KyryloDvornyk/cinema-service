@@ -15,19 +15,38 @@ delete, get data from db.
 
 ## Usage
 
-Open API testing tool, go on request http://yourlocalhost/register-user or /register-admin to register user with different roles to db.
-Use your credentials from register body to log in by Authorization tab(if you use Postman). 
-Then you can send requests to create data in db, update, delete, get. You can use next end points(listed by (REQUEST_TYPE - ENDPOINTS_NAMES - AUTHORIZED_ROLE)): 
-GET - /cinema-halls, /movies, /movie-sessions/available - all roles, GET - /users/by-email?email - ADMIN role,
-GET - /orders, /shopping-carts/by-user - USER role; 
-POST - /register-user, /register-admin - unauthorized, POST - /cinema-halls, /movies, /movie-sessions - ADMIN role, 
-POST - /orders/complete - USER role; PUT /movie-sessions/id - ADMIN role, PUT - /shopping-carts/movie-sessions?movieSessionId - USER role; 
-DELETE - /movie-sessions/id - ADMIN role.  
-Example for body params for POST and PUT requests  
-POST /register-user, /register-admin: {"password" : "12345678", "repeatPassword" : "12345678", "email" : "email@gmail.com"}   
-POST /cinema-halls: {"capacity" : 180, "description" : "description"}  
-POST /movies: {"title" : "title", "description" : "description"}  
-POST /movie-sessions: {"movieId" : 1, "cinemaHallId" : 1, "showTime" : "01.01.2021"}  
+Open API testing tool, go on request http://yourlocalhost/register-user or /register-admin
+to register user with different roles to db.
+Use your credentials from register body to log in by Authorization tab(if you use Postman).
+Then you can send requests to create data in db, update, delete, get.
+You can use next end points(listed by (REQUEST_TYPE - ENDPOINTS_NAMES - AUTHORIZED_ROLE)):
+
+- GET - /cinema-halls, /movies, /movie-sessions/available - all roles,
+- GET - /users/by-email?email - ADMIN role,
+- GET - /orders, /shopping-carts/by-user - USER role;
+- POST - /register-user, /register-admin - unauthorized,
+- POST - /cinema-halls, /movies, /movie-sessions - ADMIN role,
+- POST - /orders/complete - USER role; PUT /movie-sessions/id - ADMIN role,
+- PUT - /shopping-carts/movie-sessions?movieSessionId - USER role;
+- DELETE - /movie-sessions/id - ADMIN role.
+
+Example for body params for POST and PUT requests:
+- POST /register-user, /register-admin:
+```
+{"password" : "12345678", "repeatPassword" : "12345678", "email" : "email@gmail.com"}   
+```
+- POST /cinema-halls:
+```
+{"capacity" : 180, "description" : "description"}  
+```
+- POST /movies:
+```
+- {"title" : "title", "description" : "description"} 
+```
+- POST /movie-sessions:
+```
+- {"movieId" : 1, "cinemaHallId" : 1, "showTime" : "01.01.2021"} 
+```
 
 ## Technologies
 ```
