@@ -41,11 +41,11 @@ Example for body params for POST and PUT requests:
 ```
 - POST /movies:
 ```
-- {"title" : "title", "description" : "description"} 
+{"title" : "title", "description" : "description"} 
 ```
 - POST /movie-sessions:
 ```
-- {"movieId" : 1, "cinemaHallId" : 1, "showTime" : "01.01.2021"} 
+{"movieId" : 1, "cinemaHallId" : 1, "showTime" : "01.01.2021"} 
 ```
 
 ## Technologies
